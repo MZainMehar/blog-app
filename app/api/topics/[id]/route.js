@@ -9,3 +9,12 @@ export async function PUT(req, {params}) {
     await Topic.findByIdAndUpdate(id, { title, description });
     return NextResponse.json({ message: "Topic updated successfully" }, { status: 200 });
 }
+
+
+
+export async function GET(req, {params}) {
+    const { id } = params;
+    await connectMongoDB();
+    const topic = await Topic.findById({_id: id});
+    return NextResponse.json(topic, { status: 200 });
+}
