@@ -12,7 +12,7 @@ export default function RemoveBtn({ topicId }) {
             return;
         }
         try {
-            const res = await fetch(`http://localhost:3000/api/topics?id=${topicId}`, {
+            const res = await fetch(`https://blog-app-rho-lake.vercel.app/api/topics?id=${topicId}`, {
                 method: "DELETE",
             });
             if (res.ok) {

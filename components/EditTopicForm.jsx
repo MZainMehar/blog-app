@@ -18,7 +18,7 @@ export default function EditTopicForm({ id, title, description }) {
             return;
         }
         try {
-            const res = await fetch(`http://localhost:3000/api/topics/${id}`, {
+            const res = await fetch(`https://blog-app-rho-lake.vercel.app/api/topics/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
