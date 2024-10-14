@@ -17,7 +17,7 @@ export default function AddTopic() {
             return;
         }
         try {
-            const res = await fetch("https://blog-app-rho-lake.vercel.app/api/topics", {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/topics`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
