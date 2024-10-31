@@ -28,7 +28,7 @@ export default async function TopicsList() {
 
   return (
     <>
-      <h3>Topics with cache: 'no-store'</h3>
+      <h3>Topics with cache: no-store</h3>
       {topicsNoStore.length ? (
         topicsNoStore.map((topic) => (
           <div key={topic._id} className="p-4 border border-slate-300 my-3 flex justify-between gap-5 items-start">
@@ -45,7 +45,7 @@ export default async function TopicsList() {
           </div>
         ))
       ) : (
-        <div>No topics available with cache: 'no-store'.</div>
+        <div>No topics available with cache: no-store.</div>
       )}
 
       <h3>Topics with default cache</h3>
